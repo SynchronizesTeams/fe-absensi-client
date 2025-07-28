@@ -1,20 +1,20 @@
 <template>
-  <div class="flex justify-center items-center h-screen px-6 bg-red-100">
+  <div class="flex justify-center items-center h-screen px-6 ">
     
     <div
-      class="absolute top-30 sm:top-36 text-7xl font-extrabold text-red-500 opacity-10 select-none pointer-events-none  z-0"
+      class="absolute top-30 sm:top-36 text-7xl font-extrabold text-secondary-dark opacity-10 select-none pointer-events-none  z-0"
     >
       ABSENSI
     </div>
     <form
       action=""
-      class="flex flex-col gap-6 bg-primary-red rounded-xl w-full max-w-md p-8 shadow-2xl z-10"
+      class="glass-card flex flex-col gap-6  rounded-xl w-full max-w-md p-8 shadow-2xl z-10"
       @submit.prevent="handleLogin"
     >
       <div class="flex flex-col items-center gap-2 text-center">
         <img src="../../assets/images/LogoPenus.webp" alt="Logo" class="w-14" />
-        <h1 class="font-bold text-3xl text-primary-light text-shadow-sm">Masuk</h1>
-        <p class="text-primary-light text-sm text-shadow-sm">
+        <h1 class="font-mono font-bold text-3xl text-primary-light text-shadow-sm">LOGIN</h1>
+        <p class="text-secondary-dark font-mono text-md text-shadow-sm">
           Masukkan kredensial untuk masuk ke akun Anda
         </p>
       </div>
@@ -44,7 +44,7 @@
       </div>
 
       <button
-        class="bg-primary-light text-red-600 font-semibold rounded-md py-3 mt-2 hover:bg-white transition-all duration-200 shadow-lg cursor-pointer"
+        class="hover:bg-primary-red font-mono text-primary-light font-bold border-2 border-primary-light rounded-lg py-3 px-6 text-lg w-full transition-all hover:shadow-none hover:translate-y-[3px]"
         type="submit"
       >
         Masuk

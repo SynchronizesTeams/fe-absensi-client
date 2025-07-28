@@ -1,7 +1,7 @@
 export interface loginResponse {
   message: string;
-  data: {
-    user_id: number;
+  user: {
+    user_id: string;
     name: string;
     no_induk: string;
     email: string;
