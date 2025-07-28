@@ -2,10 +2,20 @@
 
 
 @theme {
-  --color-primary-red: #ff6467;
+  --color-primary-red: #f41945;
   --color-secondary-red: #ffe2e2;
   --color-tertiary-red: #fdcecf;
-  --color-primary-light: #ffe2e2;
+  --color-primary-light: #cacbcf;
+  --color-primary-dark: #1a1c26;
+  --color-secondary-dark: #6b6d79;
+}
 
-  --color-answered: #00C16A;
+@layer base {
+  body {
+    @apply bg-primary-dark;
+  }
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300;
 }

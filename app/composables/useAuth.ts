@@ -2,12 +2,10 @@ import type { loginResponse } from "~/types/main.type";
 import { UseStorage } from "./useStorage";
 
 export const UseAuth = () => {
-  const { setToken, getToken } = UseStorage();
-  
+  const { setToken } = UseStorage();
   const BASE_URL = useRuntimeConfig().public.apiBase;
-  // const Register = () => {
-    
-  // }
+
+
   const Login = async (data: any) => {
     try {
       const res: loginResponse = await $fetch(`${BASE_URL}/api/login`, {
@@ -20,7 +18,11 @@ export const UseAuth = () => {
       });
 
       setToken(res.token);
-      navigateTo("/test")
+      navigateTo("/absen")
+      console.log(res.user.user_id)
+      localStorage.setItem("user_id", res.user.user_id)
+      localStorage.setItem("nama", res.user.name)
+
     } catch (error) {
       console.log("login error", error);
       throw error;
@@ -30,7 +32,9 @@ export const UseAuth = () => {
   const Logout = () => {
     try {
       setToken("");
-      return navigateTo("/login");
+      localStorage.removeItem("user_id")
+      localStorage.removeItem("nama")
+      return navigateTo("/auth/login");
     } catch (error) {
       console.log("erlerlerlr");
     }
