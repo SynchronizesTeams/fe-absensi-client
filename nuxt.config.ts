@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
 
-  ssr: true,
+  ssr: false,
   nitro: {
     preset: "static",
   },
@@ -44,7 +44,8 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      globPatterns: ["**/*.{js,css,html,ico,png,svg}"]
+      navigateFallback: "/",
+      globPatterns: ["**/*.{js,css,html,woff2,json,png,svg}"],
     },
     devOptions: {
       enabled: true,

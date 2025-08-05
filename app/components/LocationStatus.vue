@@ -8,7 +8,6 @@
       Lat: {{ location.latitude.toFixed(6) }}, Lng:
       {{ location.longitude.toFixed(6) }}
       <br />
-      Akurasi: ±{{ Math.round(location.accuracy) }}m
     </div>
   </div>
 </template>
@@ -17,7 +16,6 @@
 interface LocationData {
   latitude: number;
   longitude: number;
-  accuracy: number;
 }
 
 interface Props {
